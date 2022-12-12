@@ -1,0 +1,70 @@
+To make a repository => 
+git status (To check the status of ... whether the given is a git repository or not)
+If Not, then
+git init (To initialize for making a git repository)
+git --a or git add . (To stage all the files)
+git restore --staged <file name> => To unstage a file
+git commit -m "Put Message" (To finish the repository by putting a message of some modification)
+
+git log => 
+git log (To get the commits)
+git log -p (To find which line is added or which line is removed)
+git log -p -n(number) (To find the commit and which line is added or which line is removed for a specific number)
+git log --stat => To get the summary of a commit
+git log --pretty=oneline => To get the commit in one line
+git log --pretty=short => To get the two-line summary of a commit
+git log --pretty=full => To get the three-line summary of a commit
+git log --pretty=format:"%h -- %an" => To get the summary of a commit from two particulars...for more info, checkout git scm
+git log --since=n(number).timeInterval(like days, months etc) => To get the short-line commits for a particular time-interval
+git log --amend => To amend the message and change in the commit
+
+git add fileName (To add a particular file to staging area)
+git clone <urlName>
+rm -rf .git (To delete the git repository)
+pwd => (Present Working Directory) => To check the directory u r in
+ls => To list the the content in file
+cd <file name> (Change Directory) => To change the directory
+touch <file name> (to add a file to the folder)
+
+To ignore a file => 1) Write touch .gitignore
+                    2) Then write <file name> as a text in that file
+
+To ignore outer folder => 1) Write touch .gitignore
+                      2) Suppose the name of the folder is git, then write /git/ in the gitignore file
+
+To ignore outer folder => 1) Suppose the name of the folder is git, then write git/ in gitignore file
+
+git diff => To compare working directory and staged directory
+
+git diff --staged => To compare past commit and staging area 
+
+git -a -m "Message" => To skip the staging area and directly commit. It stage the tracked files and directly commit, not untracked. 
+
+git rm <file name> => To delete a file
+
+git rm --catched <file name> => To untrack a file
+If the file's name is in the gitignore file, then it will not display in untracked file after writing git status
+
+git mv <file name> <renamed file name> => To rename a file
+
+git checkout -- <file name> => To restore the content in a particular file
+
+git checkout -f => To restore all the content in all the files
+
+Alias (To create short-form of a big code) => git config --global.<short-form> '<full-form>'
+
+Creating and Switching branches => git checkout -b <branchName> => To create a new branch.
+git checkout master => To return back to the master branch.
+git branch => To find out all the branches in the repository.
+git branch -v => To find the last commit of the branch in which you are.
+
+Note :- Always commit before switching branches
+
+Merging Branches =>
+git merge <branch name> => To merge a branch.
+git branch -- merged => To find out the merged branches.
+git branch -- no-merged => To find out the non-merged branches.
+
+Deleting Branches =>
+git branch -d <branch name> => Gives error if the branch is not merged.
+git branch -D <branch name> => Deletes without giving error.
